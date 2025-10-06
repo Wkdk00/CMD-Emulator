@@ -80,7 +80,7 @@ class TerminalEmulator:
             return "break"
         
         if cmd[0] == "exit" and len(cmd) == 1:
-            self.root.quit()
+            sys.exit(0)
         elif cmd[0] == "echo":
             self.text_area.insert(tk.END, " ".join(cmd[1:]) + "\n")
         elif cmd[0] == "ls":
